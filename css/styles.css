@@ -197,32 +197,28 @@ footer {
 .page-header .container {
   display: flex;
   justify-content: space-between;
+}
+.page-header {
   border-bottom: 1px solid #e7e9fc;
 }
 
 .page-header .container .page-nav {
   display: flex;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  gap: 40px;
 }
 
 .page-header .container .add-list {
   display: flex;
   margin-top: 24px;
   margin-bottom: 24px;
+  gap: 40px;
 }
 
 .page-header .container .navigation {
   display: flex;
-}
-
-/* додати not last-child внизу? */
-.page-header .container .page-nav .link {
-  margin-right: 40px;
-}
-
-.page-header .container .add-link:not(:first-child) {
-  margin-left: 40px;
+  align-items: center;
 }
 
 /* body */
@@ -230,13 +226,14 @@ footer {
 .main-banner .container {
   display: flex;
   flex-direction: column;
-  height: 600px;
   align-items: center;
   justify-content: center;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .main-banner .container .banner-title {
-  margin-top: 188px;
+  max-width: 496px;
 }
 
 .main-banner .container .btn-banner {
@@ -244,9 +241,10 @@ footer {
   margin-top: 48px;
   border-radius: 4px;
   border-style: none;
-  margin-bottom: 188px;
+  max-width: 169px;
 }
-/* як додати тінь до кнопки? */
+
+/* 2 cекція */
 
 .hidden-title {
   position: absolute;
@@ -260,8 +258,11 @@ footer {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-.quality ul {
+.quality .container {
+  display: flex;
+  padding: 120px 0;
+}
+.quality .section-list {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -269,22 +270,36 @@ footer {
   gap: 24px;
 }
 
+.quality .section-list .quality-title {
+  margin-bottom: 8px;
+}
+
+.quality .section-list .quality-text {
+  margin: 0;
+}
+
 .quality li {
   max-width: 264px;
   width: calc((100% - 72px) / 4);
-  margin: 120px 0;
 }
 
-.team ul {
+/* cекція 3 */
+
+.team .container {
+  display: flex;
+  padding: 120px 0;
+  flex-direction: column;
+  align-items: center;
+}
+.team .workers-list {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 24px;
 }
 
-.team-title {
-  padding-top: 120px;
-  padding-bottom: 72px;
+.team .container .team-title {
+  margin-bottom: 72px;
 }
 
 .team .workers {
@@ -293,36 +308,53 @@ footer {
   align-items: center;
   justify-content: center;
   text-align: center;
-  flex-direction: column;
-  gap: 8px;
-  padding-bottom: 32px;
-  margin-bottom: 120px;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
 
-.team .workers .name {
-  padding-top: 32px;
-  padding-bottom: 8px;
+.team .container .workers-list .workers .name-and-job {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 32px 0;
 }
 
-.p-title {
+.team .container .workers-list .workers .name {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.team .container .workers-list .workers .text {
+  text-align: center;
+}
+
+/* 4 section */
+
+.portfolio .container {
   padding-top: 120px;
-  padding-bottom: 72px;
+  padding-bottom: 120px;
+}
+.p-title {
+  margin-bottom: 72px;
 }
 
-.portfolio ul {
+.portfolio .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  margin-bottom: 120px;
+  column-gap: 24px;
+  row-gap: 48px;
 }
 
 .portfolio .app {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: calc((100% - 72px) / 3);
+  width: calc((100% - 48px) / 3);
+}
+
+.portfolio .container .portfolio-list .app .name {
+  margin-bottom: 8px;
 }
 
 .portfolio .app .app-content {
@@ -332,16 +364,19 @@ footer {
   border-left: 1px solid #e7e9fc;
   border-bottom: 1px solid #e7e9fc;
   border-right: 1px solid #e7e9fc;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  padding-left: 16px;
-  gap: 8px;
+  padding: 32px 16px;
 }
 
-.ftr .container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding-top: 100px;
-  padding-bottom: 100px;
+/* footer */
+
+.ftr {
+  padding: 100px 0;
+}
+
+.ftr .container .logo {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+.ftr .container .f-text {
+  margin: 0;
 }
