@@ -203,15 +203,23 @@ footer {
 
 .page-header .container .page-nav {
   display: flex;
-  padding-top: 24px;
-  padding-bottom: 24px;
   gap: 40px;
+}
+
+.page-header .container .page-nav .link {
+  padding: 24px 0;
+}
+
+.page-header .container .add {
+  display: flex;
+  align-items: center;
+}
+.page-header .container .add .add-list .address {
+  padding: 24px 0;
 }
 
 .page-header .container .add-list {
   display: flex;
-  margin-top: 24px;
-  margin-bottom: 24px;
   gap: 40px;
 }
 
